@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.banner {
+    font-weight: bolder;
+    width: 100%;
+    padding: 20px;
+    background-color:#b5b4b4;;
+    text-align: center;
+    border-bottom: 2px solid #b5b4b4;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    /* Fixes the header to the top */
+    top: 0;
+    z-index: 1000;
+    /* Ensures the banner stays on top */
+    margin-bottom:5rem ;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #002244;
+    /* Color matching the image */
+}
+
+.container {
+    text-align: center;
+    background: #e9e3da;;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    width: 100%;
+    margin: 200px auto 0 auto;
+    border: 0.5px solid #b5b4b4;
+    /* Adjusts the margin to account for the fixed header */
+}
+.container h1{
+    color:#002244;
+    text-align: left;
+    
+}
+
+#input-sentence {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#tag-button {
+    padding: 10px 20px;
+    background-color: #a21920;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.output-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.output-container h2 {
+    margin-bottom: 10px;
+    color:#002244;
+}
+
+.output-box {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-height: 50px;
+}
+
+
+.meet-ceo {
+    position: fixed;
+    bottom: 500px;
+    left: 10px;
+    background-color: #a21920;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.meet-ceo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.meet-ceo:hover {
+    background-color: #02294d;
+}
+
+.ceo-modal-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.ceo-image {
+
+    flex: 1;
+    max-width: 50%;
+    /* Adjust width to 45% for better fit */
+    margin-right: 20px;
+    /* Space between the image and the details */
+}
+
+.ceo-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-top: -1.5rem;
+    margin-bottom: -1.5rem;
+    margin-left: 1.0rem;
+
+}
+
+.ceo-details {
+    flex: 2;
+    /* Adjust flex to 2 to make more room for text */
+    margin-left: 20px;
+}
+
+.ceo-details h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ceo-details p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ceo-details .ceo-name {
+    font-size: 1.5rem;
+    color: #a21920;
+    margin-bottom: 10px;
+}
+
+.ceo-details .ceo-description {
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Modal Hidden by Default */
+#ceo-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #C3C3C3;
+    border-radius: 0px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1001;
+    width: 50%;
+    /* Increase width for more content space */
+}
+
+/* Modal Active */
+#ceo-modal.active {
+    display: flex;
+}

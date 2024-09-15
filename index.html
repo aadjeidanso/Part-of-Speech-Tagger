@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part of Speech Tagger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>WELCOME TO EMMANUEL ADJEI DANSO'S INTERACTIVE PART OF SPEECH TAGGER</h1>
+    </div>
+
+    <main>
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Interactive Part of Speech Tagger</h1>
+        <textarea id="input-sentence" placeholder="Type a sentence here..."></textarea>
+        <button id="tag-button">Tag Parts of Speech</button>
+
+        <!-- Output Section -->
+        <div class="output-container">
+            <h2>OUTPUT:</h2>
+            <div id="output" class="output-box"></div>
+        </div>
+    </div>
+
+    <div class="meet-ceo">
+        <a href="#">MEET THE DEVELOPER</a>
+    </div>
+
+    </main>
+    <!-- CEO Pop-up Modal -->
+    <div id="ceo-modal" class="ceo-modal-content">
+        <div class="ceo-image">
+            <img src="ceo-photo.jpg" alt="CEO Picture">
+        </div>
+        <div class="ceo-details">
+            <h1>Meet The DEVELOPER</h1>
+            <p class="ceo-name">Emmanuel Adjei Danso</p>
+            <p class="ceo-description">
+                Mr.Emmanuel is an aspiring software engineer and teacher with interest and expertise in APPLICATON
+                DEVELOPMENT (desktop,
+                mobile, web, games, AI & ML, security software), SYSTEM DEVELOPMENT (OS and embedded systems), SOFTWARE
+                MAINTENACE, SUPPORT, TESTING and QA, DBMS , and CLOUD SERVICES. Emmanuel is passionate about creating
+                innovative solutions and empowering
+                others through technology...</p>
+        </div>
+        <button class="close-button">&times;</button>
+    </div>
+
+        <script>
+            // Get the modal
+            var ceoModal = document.getElementById("ceo-modal");
+
+            // Get the button that opens the modal
+            var ceoBtn = document.querySelector(".meet-ceo a");
+
+            // Get the <span> element that closes the modal
+            var ceoClose = document.querySelector(".close-button");
+
+            // When the user clicks the button, open the modal 
+            ceoBtn.onclick = function (event) {
+                event.preventDefault();
+                ceoModal.classList.add("active");
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            ceoClose.onclick = function () {
+                ceoModal.classList.remove("active");
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == ceoModal) {
+                    ceoModal.classList.remove("active");
+                }
+            }
+        </script>
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>
